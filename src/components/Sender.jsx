@@ -32,7 +32,7 @@ export default function Sender() {
 
   async function loadWaste() {
     /* create a generic provider and query for Wastes */
-    const provider = new ethers.providers.JsonRpcProvider("https://op-avail-sepolia.alt.technology");
+    const provider = new ethers.providers.JsonRpcProvider("https://rpc.ankr.com/scroll_sepolia_testnet");
     const contract = new ethers.Contract(wastemarketplaceAddress, Waste.abi, provider);
     const data = await contract.fetchMarketItems();
     console.log("Waste data fetched from contract", data);
