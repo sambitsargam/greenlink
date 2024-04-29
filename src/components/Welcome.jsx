@@ -11,42 +11,18 @@ const injected = injectedModule();
 
 const modules = [walletConnect, injected];
 
-const RPC_URL = "https://rpc.public.zkevm-test.net";
-const LRPC_URL = "https://rpc.goerli.linea.build/";
-const ARBITRUM_RPC_URL = "https://sepolia-rollup.arbitrum.io/rpc";
-const AVAIL_RPC_URL = "https://op-avail-sepolia.alt.technology";
+const RPC_URL = "https://rpc.ankr.com/scroll_sepolia_testnet";
 
 
 const onboard = Onboard({
   wallets: modules, // created in previous step
   chains: [
     {
-      id: "0x5a2",
+      id: "0x8274f",
       token: "ETH",
       namespace: "evm",
-      label: "ZKEVM Polygon Testnet",
+      label: "Scroll Testnet ",
       rpcUrl: RPC_URL,
-    },
-    {
-      id: "0x7a0202ad",
-      token: "ETH",
-      namespace: "evm",
-      label: "OP Avail Sepolia Testnet",
-      rpcUrl: AVAIL_RPC_URL,
-    },
-    {
-      id: "0x66eee",
-      token: "ETH",
-      namespace: "evm",
-      label: "Arbitrum Testnet",
-      rpcUrl: ARBITRUM_RPC_URL,
-    },
-    {
-      id: "0xe704",
-      token: "ETH",
-      namespace: "evm",
-      label: "linea Goerli Testnet",
-      rpcUrl: LRPC_URL,
     },
   ],
   appMetadata: {
