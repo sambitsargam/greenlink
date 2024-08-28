@@ -11,7 +11,7 @@ const injected = injectedModule();
 
 const modules = [walletConnect, injected];
 
-const RPC_URL = "https://rpc.ankr.com/scroll_sepolia_testnet";
+const RPC_URL = "https://scroll-sepolia.chainstacklabs.com";
 
 
 const onboard = Onboard({
